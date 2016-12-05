@@ -1,0 +1,6 @@
+gcloud compute instances create my-instance-name --boot-disk-size=40GB --boot-disk-type=pd-ssd --can-ip-forward --custom-cpu=4 --custom-memory=15 --description="Hopefully the same as the other machiene" --tags=browser-apps --zone=asia-northeast1-c --image-family=ubuntu-1604-lts --image-project=ubuntu-os-cloud
+
+After this you can run gcloud compute config-ssh
+And now run:
+ssh my-instance-name.asia-northeast1-c.PROJECT_NAME 
+to ssh into the newly created cloud VM. Simple!

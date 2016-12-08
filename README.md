@@ -21,3 +21,5 @@ Taking a look into gcloud and other google-cloud-sdk commands and how the can be
   ii. How to put different machiens on different networks
  
 6. How to share files between local machiene and cloud machienes
+
+7. Automating zone selections

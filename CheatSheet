@@ -1,0 +1,15 @@
+#CheatSheet!
+
+"gcloud config configurations list"
+Lists all available configurations
+
+"gcloud compute instances list"
+Lists all VM instances
+
+"gcloud compute instance start NAME"
+
+"gcloud compute config-ssh"
+Makes sshing into VMs easier memorable alias to ~/.ssh/config
+
+"gcloud compute firewall-rules create NAME --allow tcp:8000-9000,icmp"
+Allows access to all ports in the range [8000,9000]

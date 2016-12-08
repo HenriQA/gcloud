@@ -13,3 +13,5 @@ Makes sshing into VMs easier memorable alias to ~/.ssh/config
 
 "gcloud compute firewall-rules create NAME --allow tcp:8000-9000,icmp"
 Allows access to all ports in the range [8000,9000]
+
+"gcloud compute instance-groups managed resize NAME --size=SIZE" will change the amount of machines in a group to SIZE.

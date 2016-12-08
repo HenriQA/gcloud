@@ -1,0 +1,30 @@
+gcloud compute:
+
+	gcloud compute GROUP | COMMAND [GLOBAL -FLAG ...]
+
+Bassic help found at https://cloud.google.com/sdk/gcloud/reference/compute
+
+(gcloud help will give a discription of flags to all commands.
+
+A few types of GROUP are:
+	networks
+	firewall-rules
+	machiene-types
+	vpn-tunnels
+	zones 
+	(among MANY others!)
+	
+	I'm guessing this is to select which machienes you run certain commands on, although I'm not sure. You can select many attributes of the machiene and can probably choose a machiene in the overlap of two or more groups. This needs to be looked into! 
+
+COMMAND is one of the following:
+
+	config-ssh
+	copy-files
+	reset-windows-password
+	ssh
+
+	I'm not to sure what this means now. I kind of expected stuff like firewall rules to be included here with perhaps a few commands like launch instance and create, start, stop etc. I will need to investigate the GROUPS further and find out more.
+
+
+UPDATE:
+I now think that GLOBAL_FLAGS are what's used to select various groups of machienes whilst GROUPS and COMMAND runs various commands on the machienes.

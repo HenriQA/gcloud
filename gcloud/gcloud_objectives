@@ -1,0 +1,25 @@
+gcloud goals:
+
+How to create a cloud machiene.
+How to provision a machiene with a bootstrap file.
+Is it possible to see machiene options from the command line?
+How to stop start and destroy a machiene from the command line.
+
+Network settings:
+What can I do with the network settings?
+How can I allow access to the VM via a browser.
+How can I ssh into the VM with PuTTY and ssh.
+What else can I do with google cloud?
+
+Test. Run the puppet project on the cloud instead of VMs. Can I use different OS machienes? Is it possible to automate all of this from within a VM?
+
+
+USER_GUIDE Goals
+
+How to install Google-cloud-sdk
+How to initialise google cloud
+How to change projects
+How to change users
+How to automate the above
+Then explain commands that I use in the above project.
+

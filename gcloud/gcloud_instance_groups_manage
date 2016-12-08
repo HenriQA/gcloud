@@ -1,0 +1,24 @@
+GCLOUD COMPUTE INSTANCE-GROUPS (Need to create a template before this can be used).
+
+MANAGED
+
+CREATE
+
+	NAME is the name of the group
+	
+	--size is the initial number of instances in the group
+	
+	--template specifies the instance template to use when creating new instances
+
+	Either:
+	--region or
+	--zone must be specified. To get a list of regions use gcloud compute regions list (similar for zones).
+
+	--base-instance-name is the base name
+
+SET-AUTOSCALING
+
+	
+
+
+

@@ -1,0 +1,28 @@
+HOW TO INSTALL GOOGLE_CLOUD_SDK
+
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+
+echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+sudo apt-get update
+
+#Only the top package is neccessary (all otheres are optional)
+sudo apt-get install google-cloud-sdk\
+google-cloud-sdk-app-engine-python\
+google-cloud-sdk-app-engine-java\
+google-cloud-sdk-datastore-emulator\
+google-cloud-sdk-pubsub-emulator\
+google-cloud-sdk-bigtable-emulator\
+kubectl\
+
+#The values passed to this command are not correct and must be changed.
+gcloud init --console-only --skip-diagnostics << EOF
+1
+1
+1
+n
+EOF
+
+

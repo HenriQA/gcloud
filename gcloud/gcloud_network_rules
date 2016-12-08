@@ -1,0 +1,5 @@
+gcloud compute firewall-rules create NAME --allow tcp:8080,icmp
+
+This works withoud icmp too! However icmp is an error reporting protocol network. It will generate error messages to the source IP address when network problems prevent delivery of IP packets.
+
+a range of ports is also possible just write tcp:8000-9000 in the correct place.

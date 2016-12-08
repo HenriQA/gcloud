@@ -1,0 +1,27 @@
+gcloud config list	is a command that tells you which project and account you are using.
+
+"gcloud compute config-ssh" makes SSHing into virtual machienes easier by adding an alias for each instance under ~/.ssh/config. Each instance will be given an alias of the form NAME.ZONE.PROJECT.
+
+"gcloud compute copy-files" copies files between a virtual machiene instance and your local machiene. This command uses scp(1) in the background to facilitate the transfer.
+
+"gcloud compute disks" reads and manipulates Google Compute Engine disks.
+
+"gcloud instance-template" creates an instance template that can be used to create instances in any zone!
+
+To see which instances are running run "gcloud compute instances list"
+
+You can use "gcloud copute instances move" to move an instance between zones.
+
+"gcloud auth list" shows a list of accounts you currently have available.
+
+"gcloud config configurations list" lists all available configurations.
+
+Use "gcloud config configurations create CONFIGURATION_NAME --no-activate" to create a new configuration.
+Then use "gcloud config configurations activate CONFIGURATION_NAME" to switch to that configuration.
+You can reinitialise a configuration by running "gcloud init".
+I think gcloud config set may be able to do the same thing! Let's see. YES! "gcloud config set project valued-bastion-148513" worked!
+
+
+
+FIREWALL RULES
+"gcloud compute firewall-rules" can be used to list, create, update, and delete GCE firewall rules. But what firewall rules do I need to see stuff like JIRA?

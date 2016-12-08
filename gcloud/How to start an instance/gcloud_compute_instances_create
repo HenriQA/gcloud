@@ -1,0 +1,54 @@
+gcloud compute instances
+
+"gcloud compute instances" reads and manipulates GCE virtual machiene instances.
+
+(You can check the progress of the instances by running "gcloud compute instances get-serial-port-output"
+
+
+"gcloud compute instances create"
+
+	The --tags flag is important for indentifying instances to which network firewall rules will apply.
+
+
+	--boot-disk-size (multiple of 1GB) is the size of the bootdisk your instance will be created with. The minimum size is 10GB.
+	--boot-disk-type is the type of boot disk (to see what options there are run "gcloud compute disk-types)
+	--can-ip-forward looks like an interesting flag to try. "allows instances to send and recieve packages with non-matching destination or source IP addresses".
+
+	--custom-cpu A whole number indicating how many cores are desired. Both --custom-cpu and --custom-memory must be specified if a custom machiene type is desired and the --machiene-type flag must be ommited!
+
+I WANT TO HAVE SOMETHING LIKE A YAML FILE TO SET ALL THIS UP OR SAVE THE SETTINGS UNDER SOME ALIAS?
+
+	--description sets a text description of the instance.
+
+	--disk is a complec one and seems like more research could be done into it. This will attach persistent disks (that already exist) to the instances.	
+	
+	--image-project. This is the project against which all image and image family references will be resolved (look at --image)
+
+	--image This specifies the boot image for the instances. When using this option --boot-disk-device-name and --boot-disk-size can be used to override the boot disk's device name and size respectively. "gcloud compute images list" gives a list of all publically available images ;)
+
+	--machiene-type specifies the machiene type used for the instances. You can list these by useing "gcloud compute machiene-types list".
+
+	You can use --maintinance-policy to specify a maintinance policy for instances when for when their host machiene undergoes maintinance (whatever that is). The two choices are migrate (migrate to a new host), and terminate.
+
+	--metadata This seems like an important flag. Online it says "Metadata to be made available to the guest operating system running on the insatnces.
+	For images that have Compute Engiw tools installed on them (such as official images) the following metadata keys have special meanings:
+		startup-script
+	which specifies a script that will be executed by the instances once they start running. For convenience --metadata-from-file can be used ti pull the value from a file.
+		startup-script-url
+	Pretty self explanatory but cool!
+
+	--metadata-from-file is the same as --metadata except that the value for the entry will be read from a local file. This is really usefull for large values such as startup scripts.
+
+	--network specifies which network the instance will be part of.You can also choose the --subnet flag for which the subnet must be a subnet of the network.
+
+	--preemptible instance can be configured to run for only a certain amount of time (good to save cost!).
+
+	--restart-on-failiure is set as default and means the instance will be restarted if they are terminated by Compute Engine. You can use --no-restart-on-failiure to disable this.
+
+	--zone sets which zone the instance will use. It's possible to presset this with "gcloud config set compute/zone ZONE" (you can use "gcloud config unset compute/zone" to unset). If neither of these is done you will have to manually choose from a list. To see the options you can choose tun "gcloud compute zones list".
+
+	--address assigns the given external address to the instance that is created. The address must be an IP address or the name or URI of an address resource. You can only use tgus when creating a single instance.
+	
+	--image-family specifies the family of the image the boot disk will be initialized with. When a family is specified instead of an image, the latest non-deprecated image associated with that family is used. This needs to be ran with --image-project so gcloud knows where to find the image.
+
+

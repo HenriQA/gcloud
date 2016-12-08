@@ -15,6 +15,8 @@ CREATE
 	--zone must be specified. To get a list of regions use gcloud compute regions list (similar for zones).
 
 	--base-instance-name is the base name
+	
+	EXAMPLE gcloud compute instance-groups managed create my-group --size=2 --template=gcloud-boot --region=asia-east1 --base-instance-name=nemo
 
 SET-AUTOSCALING
 

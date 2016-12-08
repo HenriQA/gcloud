@@ -3,6 +3,9 @@
 "gcloud config configurations list"
 Lists all available configurations
 
+"gcloud config configurations activate PROJECT_NAME"
+can be used to change project
+
 "gcloud compute instances list"
 Lists all VM instances
 
